@@ -31,3 +31,8 @@ gdb_disk:
 test_disk:
 	make;
 	./mk_disk file.disk;
+
+push:
+	git push https://github.com/goplemms/Forky-Fork.git master;
+pull:
+	git pull https://github.com/goplemms/Forky-Fork.git master;
