@@ -1,0 +1,21 @@
+OBJ_RUN:= run.o
+SRC_RUN:= run.cpp
+OBJ_DIS:= disk.o
+SRC_DIS:= disk.cpp
+CXX:= g++
+CXXFLAGS:= -Wall -g
+
+all: run mk_disk
+
+run: $(OBJ_RUN)
+	$(CXX) $(CXXFLAGS) $(OBJ_RUN)
+mk_disk: $(OBJ_DIS)
+	$(CXX) $(CXXFLAGS) $(OBJ_DIS)
+run.o: $(SRC_RUN)
+	$(CXX) $(CXXFLAGS) -c $(SRC_RUN)
+disk.o: $(SRC_DIS)
+	$(CXX) $(CXXFLAGS) -c $(SRC_DIS)
+clean:
+	rm $(OBJ_RUN) $(OBJ_DIS) run mk_disk
+gdb:
+	gdb --args run
