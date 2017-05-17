@@ -30,6 +30,8 @@
 *.exe
 *.out
 *.app
+mk_disk
+run
 
 # File Systems
 *.disk
