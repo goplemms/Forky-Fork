@@ -35,3 +35,7 @@
 *.disk
 *.gdb
 *.valgrind
+
+#Auto-Save
+#*#
+~*
